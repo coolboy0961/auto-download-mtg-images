@@ -2,17 +2,31 @@ use strict;
 use warnings;
 use HTML::TagParser;
 
-my $cardTotalCount = $ARGV[0];
-my $cardSeries = $ARGV[1];
-my $outputPath = $ARGV[2];
+my $cardSeries = $ARGV[0];
+my $outputPath = $ARGV[1];
 
-for (my $i = 1; $i <= $cardTotalCount; $i++) {
-  # HTML::TagParserのオブジェクト作成
-  my $html = HTML::TagParser->new( "http://magiccards.info/".$cardSeries."/cn/".$i.".html" );
+my $cardUrl1="http://magiccards.info";
+
+my $html = HTML::TagParser->new( "http://magiccards.info/query?q=%2B%2Be%3A".$cardSeries."%2Fcn&v=list&s=issue" );
+my @aList = $html->getElementsByTagName( "a" );
+foreach my $a (@aList) {
+  my $href = $a->attributes->{href};
+  if($href =~ /$cardSeries\/cn\//){
+    my $cardUrl = $cardUrl1.$href;
+    print "card url is ".$cardUrl."\n";
+    &downloadImage($cardUrl);
+  }
+}
+
+sub downloadImage{
+  my $url = $_[0];
+  my $html = HTML::TagParser->new( $url );
   my @imgList = $html->getElementsByTagName( "img" );
   my $targetImageUrl;
   my $targetEnglishCardName;
   my $targetChineseCardName;
+  $url =~ /\/(.+)\.html/;
+  my $i = $1;
   foreach my $img (@imgList){
     my $imageUrl = $img->attributes->{src};
     my $cardName = $img->attributes->{alt};
@@ -25,7 +39,7 @@ for (my $i = 1; $i <= $cardTotalCount; $i++) {
   my @aList = $html->getElementsByTagName( "a" );
   foreach my $a (@aList) {
     my $href = $a->attributes->{href};
-    if($href =~ /$cardSeries\/en\//){
+    if($href =~ /\/en\//){
       $targetEnglishCardName = $a->innerText();
     }
     if($href =~ /pca\/en\//){

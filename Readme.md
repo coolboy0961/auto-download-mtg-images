@@ -27,7 +27,7 @@ sudo cpanm install URL::Fetch
 
 ## usage
 ~~~
-perl extractMagicCards.pl 274 kld
+perl extractMagicCards.pl kld
 This is 1'st card
 Image Url is http://magiccards.info/scans/cn/kld/1.jpg
 English Card Name is Acrobatic Maneuver
@@ -69,8 +69,10 @@ Image Url is http://magiccards.info/scans/cn/kld/10.jpg
 English Card Name is Consulate Surveillance
 Chinese Card Name is 执政监视网
 ~~~
-274 is the total quantity count of series.
-kls is the series name.
+kld is the series name.
+
 *You can confim this in url like this http://magiccards.info/kld/cn/67.html*
+
 *Please notice kld.*
-274 Chinese card images will be download in the same path as extractMagicCards.pl.
+
+Chinese card images will be download in the same path as extractMagicCards.pl.
