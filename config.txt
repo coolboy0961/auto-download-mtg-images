@@ -1,0 +1,2 @@
+cardSeries=emn,aer,bfz,c16,kld,ogw,soi,cn2,ema,c15,exp,ori,mm2,dtk,frf,cn14,ktk,m15,cns,md1,jou,bng
+outputPath=/Users/coolboy096188/Desktop/card
