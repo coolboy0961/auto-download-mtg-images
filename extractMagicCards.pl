@@ -1,3 +1,10 @@
+
+=pod
+version 0.5.0   changelog
+                          add download function.
+                          add config file to config the series wanted download and output path.
+=cut
+
 use strict;
 use warnings;
 use HTML::TagParser;

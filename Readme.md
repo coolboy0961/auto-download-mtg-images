@@ -25,9 +25,17 @@ sudo cpanm install HTML::TagParser
 sudo cpanm install URL::Fetch
 ~~~
 
+## setting
+config.txt
+
+~~~
+cardSeries=emn,aer,bfz,c16,kld,ogw,soi,cn2,ema,c15,exp,ori,mm2,dtk,frf,cn14,ktk,m15,cns,md1,jou,bng
+outputPath=/Users/xxxxxx/Desktop/card
+~~~
+
 ## usage
 ~~~
-perl extractMagicCards.pl kld
+perl extractMagicCards.pl
 This is 1'st card
 Image Url is http://magiccards.info/scans/cn/kld/1.jpg
 English Card Name is Acrobatic Maneuver
@@ -69,10 +77,3 @@ Image Url is http://magiccards.info/scans/cn/kld/10.jpg
 English Card Name is Consulate Surveillance
 Chinese Card Name is 执政监视网
 ~~~
-kld is the series name.
-
-*You can confim this in url like this http://magiccards.info/kld/cn/67.html*
-
-*Please notice kld.*
-
-Chinese card images will be download in the same path as extractMagicCards.pl.
