@@ -1,2 +1,5 @@
-cardSeries=emn,aer,bfz,c16,kld,ogw,soi,cn2,ema,c15,exp,ori,mm2,dtk,frf,cn14,ktk,m15,cns,md1,jou,bng
+[settings]
+cardSeries=cn2,cns,com,cs,dd2,ddc,ddd,dde,ddf,ddg,ddh,ddi,ddj,ddk,ddl,ddm,ddn,ddo,ddp,ddq,ddr,dgm,dis,dk,dka,drb,ds,dtk,ema,emn,eve,evg,ex,exp,fd,fe,frf,fut,fve,fvl,fvr,gp,gtc,hl,hop,ia,in,isd,jou,ju,kld,ktk,le,lg,lrw,m10,m11,m12,m13,m14,m15,mbp,mbs,md1,me2,me3,me4,med,mi,mm,mm2,mma,mor,mps,mr,ne,nph,od,ogw,on,ori,p2,p3,pc2,pca,pd2,pd3,pds,plc,ps,pt,py,r,rav,roe,rtr,s2k,sc,sh,shm,soi,sok,som,st,te,ths,to,tpr,tsb,tsp,u,ud,ugf,ul,us,v12,v13,v14,v15,v16,van,vi,vma,w16,wl,wwk,zen
 outputPath=/Users/coolboy096188/Desktop/card
+
+#10e,4e,5e,6e,7e,8e,9e,a,aer,al,ala,an,ap,aq,arb,arc,avr,b,bfz,bng,bok,c13,c14,c15,c16,cfx,ch,chk,cm1,cn14,
