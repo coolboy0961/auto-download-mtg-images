@@ -97,7 +97,7 @@ sub downloadOneCardImage {
     }
     print "This is " . $cardNumber . "'st card\n";
     print "download "
-      . $targetImageUrl . "to "
+      . $targetImageUrl . " to "
       . "$path\/$targetEnglishCardName.full.jpg" . "\n";
     print "English Card Name is " . $targetEnglishCardName . "\n";
     print "Chinese Card Name is " . $targetChineseCardName . "\n";
