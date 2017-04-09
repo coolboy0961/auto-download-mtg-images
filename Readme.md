@@ -1,79 +1,43 @@
 ## prepare
 
-### confirm perl
+### confirm python3
 ~~~
-% perl -v
-
-This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level
-(with 2 registered patches, see perl -V for more detail)
-
-Copyright 1987-2013, Larry Wall
+$ python3 --version
+Python 3.6.1
 ~~~
-### cpanminus install
+### configparser install
 ~~~
-% brew search cpanminus
-cpanminus
-% brew install cpanminus
+$ pip3 install configparser
 ~~~
 
-### HTML::TagParser install
+### beautifulsoup4 install
 ~~~
-sudo cpanm install HTML::TagParser
-~~~
-### URI::Fetch install
-~~~
-sudo cpanm install URL::Fetch
+$ pip3 install beautifulsoup4
 ~~~
 
 ## setting
 config.txt
 
 ~~~
-cardSeries=emn,aer,bfz,c16,kld,ogw,soi,cn2,ema,c15,exp,ori,mm2,dtk,frf,cn14,ktk,m15,cns,md1,jou,bng
-outputPath=/Users/xxxxxx/Desktop/card
+[settings]
+cardSeries=10e,4e,5e,6e,7e,8e,9e,a,aer,al,ala,an,ap,aq,arb,arc,avr,b,bfz,bng,bok,c13,c14,c15,c16,cfx,ch,chk,cm1,cn14,cn2,cns,com,cs,dd2,ddc,ddd,dde,ddf,ddg,ddh,ddi,ddj,ddk,ddl,ddm,ddn,ddo,ddp,ddq,ddr,dgm,dis,dk,dka,drb,ds,dtk,ema,emn,eve,evg,ex,exp,fd,fe,frf,fut,fve,fvl,fvr,gp,gtc,hl,hop,ia,in,isd,jou,ju,kld,ktk,le,lg,lrw,m10,m11,m12,m13,m14,m15,mbp,mbs,md1,me2,me3,me4,med,mi,mm,mm2,mma,mor,mps,mr,ne,nph,od,ogw,on,ori,p2,p3,pc2,pca,pd2,pd3,pds,plc,ps,pt,py,r,rav,roe,rtr,s2k,sc,sh,shm,soi,sok,som,st,te,ths,to,tpr,tsb,tsp,u,ud,ugf,ul,us,v12,v13,v14,v15,v16,van,vi,vma,w16,wl,wwk,zen
+outputPath=./card
 ~~~
 
 ## usage
 ~~~
-perl extractMagicCards.pl
-This is 1'st card
-Image Url is http://magiccards.info/scans/cn/kld/1.jpg
-English Card Name is Acrobatic Maneuver
-Chinese Card Name is 杂耍计略
-This is 2'st card
-Image Url is http://magiccards.info/scans/cn/kld/2.jpg
-English Card Name is Aerial Responder
-Chinese Card Name is 翔空援兵
-This is 3'st card
-Image Url is http://magiccards.info/scans/cn/kld/3.jpg
-English Card Name is Aetherstorm Roc
-Chinese Card Name is 乙太暴洛克鸟
-This is 4'st card
-Image Url is http://magiccards.info/scans/cn/kld/4.jpg
-English Card Name is Angel of Invention
-Chinese Card Name is 新创天使
-This is 5'st card
-Image Url is http://magiccards.info/scans/cn/kld/5.jpg
-English Card Name is Authority of the Consuls
-Chinese Card Name is 执政官威权
-This is 6'st card
-Image Url is http://magiccards.info/scans/cn/kld/6.jpg
-English Card Name is Aviary Mechanic
-Chinese Card Name is 停机库技师
-This is 7'st card
-Image Url is http://magiccards.info/scans/cn/kld/7.jpg
-English Card Name is Built to Last
-Chinese Card Name is 造以恒久
-This is 8'st card
-Image Url is http://magiccards.info/scans/cn/kld/8.jpg
-English Card Name is Captured by the Consulate
-Chinese Card Name is 执政院缉捕
-This is 9'st card
-Image Url is http://magiccards.info/scans/cn/kld/9.jpg
-English Card Name is Cataclysmic Gearhulk
-Chinese Card Name is 灾变巨械
-This is 10'st card
-Image Url is http://magiccards.info/scans/cn/kld/10.jpg
-English Card Name is Consulate Surveillance
-Chinese Card Name is 执政监视网
+$ python3 downloadMtgCardImages.py
+All series will be downloaded to xxx/card .
+10e series is downloaded.
+/Users/coolboy096188/Desktop/card/10E is created.
+card url is http://magiccards.info/10e/cn/1.html
+card image url is http://magiccards.info/scans/cn/10e/1.jpg
+card cardChineseName is 祖灵的爱民
+card cardEnglishName is Ancestor's Chosen
+This card is downloaded to /Users/coolboy096188/Desktop/card/10E/Ancestor's Chosen.full.jpg
+card url is http://magiccards.info/10e/cn/2.html
+card image url is http://magiccards.info/scans/cn/10e/2.jpg
+card cardChineseName is 慈悲天使
+card cardEnglishName is Angel of Mercy
+This card is downloaded to /Users/coolboy096188/Desktop/card/10E/Angel of Mercy.full.jpg
 ~~~
