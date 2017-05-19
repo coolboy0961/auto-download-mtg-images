@@ -1,3 +1,4 @@
+# coding: UTF-8
 import configparser
 import os
 import re
@@ -118,6 +119,13 @@ def getEnglishCardName(cardChineseUrl):
     soup = BeautifulSoup(html, "html.parser")
     cardEnglishName = soup.find("img", src=re.compile(
         "http:\/\/magiccards\.info\/scans")).get("alt")
+
+    # change file name like Rags (Rags/Riches) to RagsRiches
+    pattern = "^[a-zA-Z]+ \(([a-zA-Z]+.*)/([a-zA-Z]+.*)\)"
+    repatter = re.compile(pattern)
+    matchOB = repatter.match(cardEnglishName)
+    if matchOB:
+        cardEnglishName = matchOB.group(1) + matchOB.group(2)
     return(cardEnglishName)
 
 
